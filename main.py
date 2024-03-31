@@ -1,0 +1,4 @@
+#FACE RECOGNITION USING OPENCV
+
+import cv2 as cv 
+
