@@ -1,8 +1,12 @@
 import cv2 as cv
 
-img=cv.imread('Downloads/R.jpeg')
+cap=cv.VideoCapture(0)
 
-cv.imshow('R (1)', img)
+while True:
+    isTrue, frame = cap.read()
+    cv.imshow('frame', frame)
+    if cv.waitKey(20) & 0xFF == ord('d'):
+        break
 
-cv.waitKey(0)
+cap.release()
 cv.destroyAllWindows()
